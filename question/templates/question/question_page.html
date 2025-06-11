@@ -1,0 +1,40 @@
+{% extends "main/base.html" %}
+
+{% block title %}APIConnect - Faça uma pergunta{% endblock title %}APIConnect - Faça uma pergunta
+
+{% block content %}
+<h2 class="text-center mt-5 mb-5 text-success">Yes or No API ❓</h2>
+
+<div class="container-sm">
+
+    <h3 class="text-left h3">O que essa página faz?</h3>
+    <p class="mb-4">
+        Nesta página o usuário irá fazer uma pergunta no campo de texto e ao enviar ele irá receber uma resposta que pode ser <b>Sim</b>, <b>Não</b> ou <b>Talvez</b>, e junto com sua resposta ele irá receber um gif de acordo com a resposta.
+        
+    </p>
+
+    <h3 class="text-left h3">Como esta página faz isso?</h3>
+    <p class="mb-5">
+        Esta pagina utiliza a <strong>API</strong> do <a href="https://yesno.wtf/" target="_blank">Yes or No</a> para funcionar, o usuário digita uma pergunta e ao enviar, recebe uma resposta com um gif de acordo.
+    </p>
+
+    <h3 class="text-center">Faça sua pergunta:</h3>
+
+    <div class="container-sm d-block mb-4 text-center">
+    <form action="" method="post">
+        {% csrf_token %}
+        <input class="form-control mb-3" type="text" name="make_question" id="" placeholder="Faça sua pergunta.">
+       
+        <button type="submit" class="btn btn-success">Enviar</button>
+
+    </form>
+    </div>
+
+    <div class="container-sm d-block mb-4 text-center">
+                {% if answer %}
+            <h1>{{ question }}</h1>
+            <h2>{{ answer }}</h2>
+            <img src="{{ answer_image }}" alt="Imagem da resposta">
+        {% endif %}
+    {% endblock %}
+    </div>

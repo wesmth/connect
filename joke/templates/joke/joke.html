@@ -1,0 +1,64 @@
+{% extends 'main/base.html' %}
+
+{% block title %}APIConnect - Desculpa Aleatória{% endblock  %}
+
+{% block content %}
+<h2 class="text-center mt-5 mb-5 text-success">Desculpa aleatória do dia 🧠</h2>
+
+<div class="container-sm">
+    <h3 class="text-left h3">O que essa página faz?</h3>
+    <p class="mb-4">
+        Esta página irá gerar a você uma desculpa para que você possa usar para evitar comparecer a algum evento, seja este evento com a família, com o trabalho, no colégio, ou até mesmo uma desculpa caso você seja péssimo em algum jogo. <br>
+        Só existe um porém: esta desculpa será alguma coisa extremamente absurda, sem praticamente nenhuma credibilidade, então use — ou não use — com sabedoria.
+    </p>
+
+    <h3 class="text-left h3">Como esta página faz isso?</h3>
+    <p class="mb-5">
+        Esta página utiliza a API do <strong>Gemini AI</strong> para gerar os textos de acordo com a categoria escolhida, através de um prompt já definido no <strong>Back end</strong> do projeto. Com isso, a IA consegue adequar a desculpa de acordo com o alvo selecionado.
+    </p>
+
+    <!-- AQUI É ONDE A GENTE FAZ ESPAÇO PRA CARAMBA -->
+    <h3 class="mt-5 pt-5 mb-3">Agora me diga, para quem você quer dar uma desculpa?</h3>
+
+    <form class="form-control mb-3" action="" method="post">
+        {% csrf_token %}
+        <label for="objetivo"></label>
+        <select name="target_exc" id="objetivo" class="form-select mb-3" required>
+            <option class=" text-success" value="familia" {% if request.POST.target_exc == "familia" %}selected{% endif %}>Família</option>
+            <option class=" text-success" value="esposa" {% if request.POST.target_exc == "esposa" %}selected{% endif %}>Esposa</option>
+            <option class=" text-success" value="pai" {% if request.POST.target_exc == "pai" %}selected{% endif %}>Pai</option>
+            <option class=" text-success" value="mae" {% if request.POST.target_exc == "mae" %}selected{% endif %}>Mãe</option>
+            <option class=" text-success" value="trabalho" {% if request.POST.target_exc == "trabalho" %}selected{% endif %}>Trabalho</option>
+            <option class=" text-success" value="filhos" {% if request.POST.target_exc == "filhos" %}selected{% endif %}>Filhos</option>
+            <option class=" text-success" value="colegio" {% if request.POST.target_exc == "colegio" %}selected{% endif %}>Colégio</option>
+            <option class=" text-success" value="festa" {% if request.POST.target_exc == "festa" %}selected{% endif %}>Festa</option>
+            <option class=" text-success" value="jogos" {% if request.POST.target_exc == "jogos" %}selected{% endif %}>Game</option>
+        </select>
+
+        <button class="btn btn-success" type="submit">Gerar</button>
+    </form>
+
+    {% if excuse %}
+<div class="mt-4">
+    <label for="excuseField" class="form-label"><strong>Desculpa gerada:</strong></label>
+    <div class="input-group">
+        <textarea id="excuseField" class="form-control" rows="3" readonly>{{ excuse }}</textarea>
+        <button class="btn  text-light btn-success" type="button" onclick="copiarDesculpa()">Copiar</button>
+    </div>
+</div>
+
+<script>
+    function copiarDesculpa() {
+        const campo = document.getElementById("excuseField");
+        campo.select();
+        campo.setSelectionRange(0, 99999); 
+        document.execCommand("copy");
+
+        // alerta maroto
+        alert("Desculpa copiada com sucesso!");
+    }
+</script>
+{% endif %}
+
+</div>
+{% endblock %}

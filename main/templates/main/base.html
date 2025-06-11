@@ -1,0 +1,63 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static "main/css/style.css" %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+
+    <title>{% block  title %}APIConnect - Página Inicial{% endblock   %}</title>
+</head>
+<body class="bg-light text-dark d-flex flex-column min-vh-100" >
+    <header class=" bg-success p-3  ">
+
+        <h1 class="h4 text-white m-0">API Connect</h1>
+    </div>
+
+    </header>
+        <nav class="bg-dark">
+            <ul class="nav justify-content-center nav-fill">
+                <li class="nav-item">
+                    <a class=" bg-primary text-light nav-link {% if request.path == '/' %}active{% endif %}" href="{% url 'main' %}">Início</a>
+                </li>
+                <li class="nav-item">
+                    <a class=" bg-primary text-light nav-link {% if request.path == '/joke/' %}active{% endif %}" href="{% url 'joke' %}">Desculpas Esfarrapadas</a>
+                </li>
+                <li class="nav-item">
+                    <a class=" bg-primary text-light nav-link {% if request.path == '/cat/' %}active{% endif %}" href="{% url 'cat' %}">Cat as a Service</a>
+                </li>
+                <li class="nav-item">
+                    {% url 'make_question' as make_question_url %}
+                    <a class="bg-primary text-light nav-link {% if request.path == make_question_url %}active{% endif %}" href="{{ make_question_url }}">Sim ou Não</a>
+
+                </li>
+            </ul>
+        </nav>
+    <main class="flex-grow-1 container mt-4">
+    {% block content %}
+    
+    {% endblock  %}
+    </main>
+
+    <footer id="fot" class="py-5 bg-success text-light text-center py-3 mt-5">
+        <p class="m-0 text-light">
+            Projeto feito por Weslen Matheus Dias para fins de prática | 
+            <a href="https://github.com/wesmth" target="_blank" class="text-warning">GitHub</a> |
+            <a href="mailto:wesmth@gmail.com" target="_blank" class="text-warning">Email</a> |
+            <a href="https://wa.me/5541991278171?text=Oi%20Weslen,%20vi%20teu%20site%20e%20quero%20conversar%20com%20você!"
+   target="_blank"
+   class="text-warning">
+   Whatsapp
+</a>
+        </p>
+    </footer>
+    
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
