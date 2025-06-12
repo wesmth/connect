@@ -26,14 +26,14 @@
                     <a class=" bg-primary text-light nav-link {% if request.path == '/' %}active{% endif %}" href="{% url 'main' %}">Início</a>
                 </li>
                 <li class="nav-item">
-                    <a class=" bg-primary text-light nav-link {% if request.path == '/joke/' %}active{% endif %}" href="{% url 'joke' %}">Desculpas Esfarrapadas</a>
+                    <a class=" bg-primary text-light nav-link {% if request.path == '/joke/' %}active{% endif %}" href="{% url 'joke' %}">Precisa de desculpa?</a>
                 </li>
                 <li class="nav-item">
                     <a class=" bg-primary text-light nav-link {% if request.path == '/cat/' %}active{% endif %}" href="{% url 'cat' %}">Cat as a Service</a>
                 </li>
                 <li class="nav-item">
                     {% url 'make_question' as make_question_url %}
-                    <a class="bg-primary text-light nav-link {% if request.path == make_question_url %}active{% endif %}" href="{{ make_question_url }}">Sim ou Não</a>
+                    <a class="bg-primary text-light nav-link {% if request.path == make_question_url %}active{% endif %}" href="{{ make_question_url }}">Yes or No</a>
 
                 </li>
             </ul>
