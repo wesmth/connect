@@ -58,3 +58,4 @@ def make_question(request):
 
     # Renderiza a página com as informações
     return render(request, 'question/question_page.html', context)
+    
