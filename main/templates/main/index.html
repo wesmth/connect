@@ -1,33 +1,43 @@
 {% extends "main/base.html" %}
 
 {% block content %}
-    <div class="container-sm  ">
-        <h1 class="text-center mt-5 mb-5 text-success">Bem vindo ao API Connect</h1>
+    <div class="container-sm">
+        <h1 class="text-center mt-5 mb-5 text-success">Bem-vindo ao API Connect</h1>
+
+        <h2>Aviso:</h2>
+        <p>
+            Este é um projeto desenvolvido com fins educacionais. Por essa razão, não receberá novas atualizações. Portanto, algumas das APIs utilizadas podem não estar mais funcionando no momento em que você acessá-lo.<br><br>
+            <em><strong>Última atualização realizada em:</strong></em> <strong>12/06/2025</strong>
+        </p>
+
         <h2>Sobre o Projeto – API Connect:</h2>
         <p>
-            O <b>API Connect</b> é um projeto pessoal desenvolvido com o objetivo de colocar em prática os conhecimentos que venho adquirindo ao longo dos meus estudos em programação, tanto por meio de cursos formais quanto por aprendizado autodidata. Essa iniciativa surgiu nos primeiros meses de 2025, como parte do meu processo de evolução como desenvolvedor e também como forma de documentar e consolidar o que venho aprendendo na área.
-
-            Durante o desenvolvimento, utilizei principalmente o framework <b>Django</b> e a linguagem <b>Python</b>, que foram as bases para estruturar e dar vida ao projeto. Além disso, ao longo do caminho, tive contato com outras tecnologias importantes, como <b>HTML</b>, <b>CSS</b> e o <b>Bootstrap</b>, que me ajudaram a tornar a interface mais agradável e responsiva. Esse processo de construção me permitiu não apenas aplicar conhecimentos já adquiridos, mas também explorar novos conceitos e ferramentas.
-
-            O foco principal do projeto é exercitar a integração com <b>APIs</b> <b>RESTful</b> <b>públicas</b>, utilizando dados reais em um ambiente de teste, de forma prática e funcional. Além disso, integrei a <b>IA Gemini</b>, responsável por gerar respostas personalizadas e interativas, o que agregou ainda mais dinamismo à aplicação.
-
-            O API Connect é, acima de tudo, um projeto de aprendizado contínuo. Ele foi pensado para ser parte do meu portfólio, demonstrando minha capacidade de construir soluções completas com back-end, front-end e integração com serviços externos. Mais do que um simples exercício, ele representa uma etapa importante no meu desenvolvimento como profissional da área de tecnologia.
+            O <b>API Connect</b> é um projeto pessoal criado com o objetivo de aplicar, na prática, os conhecimentos adquiridos ao longo dos meus estudos em programação — tanto por cursos formais quanto por aprendizado autodidata. Essa iniciativa surgiu nos primeiros meses de 2025, como parte do meu processo de evolução como desenvolvedor e também para documentar e consolidar o que venho aprendendo.
+        </p>
+        <p>
+            Durante o desenvolvimento, utilizei principalmente o framework <b>Django</b> e a linguagem <b>Python</b>, que serviram como base para estruturar e dar vida ao projeto. Além disso, explorei tecnologias como <b>HTML</b>, <b>CSS</b> e <b>Bootstrap</b>, que contribuíram para uma interface agradável e responsiva.
+        </p>
+        <p>
+            Esse processo permitiu não apenas aplicar conhecimentos adquiridos, mas também explorar novos conceitos e ferramentas. O foco principal do projeto é exercitar a integração com <b>APIs RESTful públicas</b>, utilizando dados reais em um ambiente de teste funcional. Também integrei a <b>IA Gemini</b>, responsável por gerar respostas personalizadas e interativas, agregando dinamismo à aplicação.
+        </p>
+        <p>
+            O API Connect é, acima de tudo, um projeto de aprendizado contínuo. Foi pensado para ser parte do meu portfólio, demonstrando minha capacidade de construir soluções completas com back-end, front-end e integração com serviços externos. Mais que um exercício, representa uma etapa importante na minha jornada como profissional de tecnologia.
         </p>
 
         <h2>Descrição das Páginas do API Connect</h2>
         <h3>Página Inicial</h3>
-        <p>Aqui você encontra uma visão geral do projeto: o que é, quais tecnologias foram usadas e qual o objetivo. É uma introdução simples e objetiva para quem quer entender rapidamente do que se trata o API Connect.</p>
+        <p>Apresenta uma visão geral do projeto: o que é, quais tecnologias foram utilizadas e qual o objetivo. É uma introdução simples e direta para quem deseja entender rapidamente do que se trata o API Connect.</p>
 
         <h3>Desculpas Esfarrapadas</h3>
-        <p>Nessa página, o usuário escolhe um tema,como trabalho, escola ou família, e a IA Gemini gera uma desculpa totalmente personalizada e criativa na hora. Não são respostas prontas, tudo é criado dinamicamente com base no input do usuário, mostrando como a inteligência artificial pode ser integrada para gerar conteúdo original.</p>
+        <p>Nesta página, o usuário escolhe um tema — como trabalho, escola ou família — e a IA Gemini gera, em tempo real, uma desculpa totalmente personalizada e criativa. As respostas são criadas dinamicamente com base no input do usuário, mostrando o potencial da inteligência artificial para gerar conteúdo original.</p>
 
         <h3>Gato Falante</h3>
-        <p>Aqui você digita uma frase e uma API pública retorna uma imagem de um gato com essa frase estampada. É uma forma prática e divertida de demonstrar o consumo de APIs que retornam conteúdo visual dinâmico, com uma interface simples e agradável.</p>
+        <p>O usuário digita uma frase e uma API pública retorna uma imagem de um gato com essa frase estampada. Uma forma divertida de demonstrar o consumo de APIs que retornam conteúdo visual dinâmico.</p>
 
         <h3>Sim, Não ou Talvez</h3>
-        <p>Essa página permite que o usuário faça qualquer pergunta e receba uma resposta aleatória: “sim”, “não” ou “talvez”. A resposta vem da API externa, é traduzida no backend e acompanhada por um GIF que combina com a resposta, proporcionando uma experiência interativa e leve.</p>
+        <p>Permite que o usuário faça qualquer pergunta e receba uma resposta aleatória: “sim”, “não” ou “talvez”. A resposta, obtida via API externa, é traduzida no backend e acompanhada por um GIF temático, proporcionando uma experiência leve e interativa.</p>
 
-        <h3>Por que esse projeto importa?</h3>
-        <p>Porque ele demonstra a aplicação prática de várias tecnologias: Django, APIs RESTful, IA generativa e front-end, de forma integrada e funcional. Cada página representa um desafio diferente, mostrando habilidades técnicas e criatividade, tudo isso em um projeto simples e acessível.</p>
+        <h3>Por que este projeto importa?</h3>
+        <p>Porque demonstra, de forma prática e acessível, a aplicação integrada de diversas tecnologias — Django, APIs RESTful, IA generativa e front-end. Cada página representa um desafio técnico diferente, refletindo criatividade, lógica e domínio técnico.</p>
     </div>
 {% endblock content %}
