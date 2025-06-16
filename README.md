@@ -74,10 +74,10 @@ Depois abre o link que irá aparecer no terminal em seu navegador.
 ## 🖼 Prints
 
 
-![Página Inicial](prints/inicio.png)
-![Desculpas Aleatórias](prints/excuse.png)
-![Frases com Gatos](prints/cat.png)
-![Sim ou não](prints/yesno.png)
+![Página Inicial](prints/1.png)
+![Desculpas Aleatórias](prints/2.png)
+![Frases com Gatos](prints/3.png)
+![Sim ou não](prints/4.png)
 
 
 ## 📫 Fala comigo!
